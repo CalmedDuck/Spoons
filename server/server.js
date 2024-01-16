@@ -1,4 +1,6 @@
-require('dotenv').config(); // This should be the first line
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config(); // Load environment variables in development
+}
 
 const express = require('express');
 const mongoose = require('mongoose');
@@ -9,12 +11,14 @@ const resolvers = require('../recipe/src/graphql/resolvers');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-const MONGO_URI = 'mongodb://127.0.0.1:27017/RecipeBook';
+const MONGO_URI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/RecipeBook';
 
+// Connect to MongoDB
 mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
 .then(() => console.log('Successfully connected to MongoDB'))
 .catch((error) => console.error('Could not connect to MongoDB:', error));
 
+// Middleware
 app.use(cors());
 app.use(express.json());
 
