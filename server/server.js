@@ -3,6 +3,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 const express = require('express');
+const path = require('path'); // Add this line
 const mongoose = require('mongoose');
 const cors = require('cors');
 const { ApolloServer } = require('apollo-server-express');
@@ -24,16 +25,20 @@ app.use(express.json());
 
 // Apollo Server setup
 const apolloServer = new ApolloServer({ typeDefs, resolvers });
+await apolloServer.start();
+apolloServer.applyMiddleware({ app });
 
-// Start the Apollo Server
-async function startApolloServer() {
-  await apolloServer.start();
-  apolloServer.applyMiddleware({ app });
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, 'path-to-your-react-app-build-folder')));
 
-  app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-    console.log(`GraphQL endpoint: ${apolloServer.graphqlPath}`);
-  });
-}
+// The "catchall" handler: for any request that doesn't
+// match one above, send back React's index.html file.
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname + '/path-to-your-react-app-build-folder/index.html'));
+});
 
-startApolloServer();
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+  console.log(`GraphQL endpoint: ${apolloServer.graphqlPath}`);
+});
+
