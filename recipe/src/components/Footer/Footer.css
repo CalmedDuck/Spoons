@@ -1,0 +1,7 @@
+.footer {
+    display: flex;
+    align-content: center;
+    padding: 5px 15px;
+}
+
+/* import seasonal colors separately*/

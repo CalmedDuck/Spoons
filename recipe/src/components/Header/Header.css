@@ -1,0 +1,43 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   /* background-color: #ff7043; Primary color */
+    /*color: #ffffff;  White text color */
+     padding: 10px 20px; /*Increased vertical padding */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+} */
+
+/* .logo a {
+    text-decoration: none;
+    color: inherit;
+} */
+
+.logo  {
+    max-width: 55%;
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.navigation a {
+    margin: 0 15px;
+    /*padding: 5px 10px;  Padding for box effect */
+    text-decoration: none;
+    /*color: #ffffff;  White text color */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
+    border-radius: 4px; /* Slight rounding of corners */
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+    /*background-color: #ffa726;  Secondary color background on hover */
+    /*color: #333333;  Darker text color for contrast */
+}
+

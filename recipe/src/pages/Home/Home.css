@@ -1,0 +1,137 @@
+.home-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    margin: auto;
+    max-width: 1200px;
+}
+
+/* :root {
+    --highlight-color: #4db6ac;
+    --background-light: #f9f9f9;
+    --text-color: #333;
+    --secondary-text-color: #555;
+    --secondary-color: #eee;
+} */
+
+.welcome-section {
+    text-align: center;
+    padding: 20px;
+
+    margin-bottom: 30px;
+    border-radius: 8px;
+}
+
+.welcome-section h1 {
+    margin-bottom: 10px;
+    font-size: 2.5em;
+}
+
+.welcome-section p {
+    font-size: 1.2em;
+}
+
+
+section {
+    /*background-color: var(--background-light);*/
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 360px; 
+}
+
+
+
+
+.featured-recipes-carousel, .latest-recipes, .categories-section {
+    margin-bottom: 30px;
+}
+
+.category-item {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.category-item:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .home-page {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    section {
+        width: 100%;
+        max-width: none;
+        padding: 15px;
+    }
+
+    .featured-recipe img {
+        max-width: 100%;
+    }
+}
+
+.featured-recipe img:hover {
+    opacity: 0.9;
+}
+
+.featured-recipe:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+.featured-recipe {
+    text-align: center;
+    padding: 10px;
+    cursor: pointer; /* Indicates clickable items */
+}
+
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.featured-recipes-section {
+    flex-grow: 2; /* Makes this section larger */
+    margin-right: 20px; /* Adds spacing between the sections */
+    /* Adjust width as needed for your layout */
+}
+
+.chatbot-section {
+    flex-grow: 1; /* Adjust as needed for your layout */
+    /* Consider setting a max-width if necessary */
+}
+
+/* You might need to adjust the styles for the slider and chatbot to fit the new layout */
+.featured-recipes-carousel .slick-slide img {
+    max-width: 100%;
+    height: auto; /* Adjust height as needed */
+}
+
+/* Adjustments for responsiveness */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+    }
+    .featured-recipes-section, .chatbot-section {
+        flex-grow: 1;
+        margin-right: 0;
+        width: 100%; /* Makes sections full width on smaller screens */
+    }
+}

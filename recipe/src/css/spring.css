@@ -1,0 +1,166 @@
+:root{
+    --one:#FAA31F;
+    --two:#D86327;
+    --three:#FFD126;
+    --four:#E59B25;
+    --five:#E6B622;
+    --six: #FEE184;
+}
+
+/*All Text...*/
+h1{
+    font-weight: bolder;
+    font-size: 40px;
+    color: var(--two);
+}
+
+h2, h3, h4{
+    font-weight: bolder;
+    font-size: 30px;
+    color: var(--one);
+}
+
+h5, h6{
+    font-weight: lighter;
+    font-size: 25px;
+    color: var(--four);
+}
+
+p {
+    font-weight: lighter;
+    font-size: 20px;
+    color: var(--two);
+}
+/*...in all .jsx files*/
+
+/*Header.jsx*/
+.header {
+    background-color: var(--six);
+    color: var(--two);
+}
+
+.navigation a {
+    text-decoration: none;
+    color: var(--two);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navigation a:hover {
+    color: var(--four);
+    background-color: var(--five);
+}
+
+/*Home.jsx*/
+.welcome-section {
+    background-color: var(--six);
+    color: var(--two);
+}
+
+.featured-recipes-carousel h2, .latest-recipes h2, .categories-section h2 {
+    color: var(--one);
+}
+
+.category-item {
+    background-color: var(--three);
+}
+
+section {
+    background-color: var(--three); 
+}
+/*LoginPage.jsx*/
+.auth-form {
+    border: 1px solid var(--five);
+    background-image: url(../images/springLogin.png);
+    /*background-color: var(--three);*/
+}
+
+.auth-form input {
+    border: 1px solid var(--five);
+}
+
+.auth-form button {
+    background-color: var(--two);
+    color: var(--six);
+}
+
+.auth-form button:hover {
+    background-color: var(--one);
+}
+
+.auth-form a {
+    color: var(--four);
+}
+
+/*SignUpPage.jsx*/
+.auth-form {
+    border: 1px solid var(--five);
+    /*background-image: url(../images/winterSignup.png);*/
+    /*background-color: var(--three);*/
+}
+
+.auth-form input {
+    border: 1px solid var(--five);
+}
+
+.auth-form button {
+    background-color: var(--two);
+    color: var(--six);
+}
+
+.auth-form button:hover {
+    background-color: var(--one);
+}
+
+.auth-form a {
+    color: var(--four);
+}
+
+/*UserProfilePage.jsx*/
+.user-profile-page {
+    background-color: var(--six);
+}
+
+.user-profile-page h1, .user-profile-page h2 {
+    color: var(--two);
+}
+
+.recipe-card {
+    border: 1px solid var(--five);
+}
+
+.recipe-card {
+    background-color: var(--three);
+}
+
+
+/*SearchRecipesPage.jsx*/
+.search-bar input {
+    border: 1px solid var(--five);
+}
+
+.search-bar button {
+    background-color: var(--two);
+    color: var(--six);
+}
+
+.search-bar button:hover {
+    background-color: var(--one);
+}
+
+/*RecipeDetails.jsx*/
+.recipe-details {
+    background-color: var(--five);
+}
+
+.recipe-details h1 {
+    color: var(--two);
+}
+
+.recipe-details p {
+    color: var(--two);
+}
+/*Footer.jsx*/
+.footer {
+    background-color: var(--six);
+    color: var(--two);
+}
