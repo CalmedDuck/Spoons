@@ -14,10 +14,9 @@ import ProtectedRoute from './components/ProtectedRoute';
 import { AuthProvider } from './context/AuthContext';
 
 const client = new ApolloClient({
-  uri: 'https://spoons.onrender.com/', // This line needs to be updated
+  uri: process.env.REACT_APP_API_URL || 'https://spoons.onrender.com/',
   cache: new InMemoryCache(),
 });
-
 
 function App() {
   return (
