@@ -14,10 +14,9 @@ import ProtectedRoute from './components/ProtectedRoute';
 import { AuthProvider } from './context/AuthContext';
 
 const client = new ApolloClient({
-  uri: process.env.REACT_APP_API_URL || 'https://spoons.onrender.com/',
+  uri: 'https://spoons.onrender.com/graphql', // Or using environment variable
   cache: new InMemoryCache(),
 });
-
 function App() {
   return (
     <ApolloProvider client={client}>

@@ -22,7 +22,8 @@ const apolloServer = new ApolloServer({ typeDefs, resolvers });
 // Wrapped in an async function
 async function startServer() {
   await apolloServer.start();
-  apolloServer.applyMiddleware({ app });
+  apolloServer.applyMiddleware({ app, path: '/graphql' });
+
 
   // Serve static files from the React app build directory
   app.use(express.static(path.join(__dirname, '..', 'recipe', 'build')));
