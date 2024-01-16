@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:5000'; // Replace with your backend's URL
+const BASE_URL = 'https://spoons.onrender.com/'; // Replace with your backend's URL
 
 export const searchRecipes = async (queryParams) => {
   try {
