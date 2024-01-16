@@ -25,11 +25,11 @@ async function startServer() {
   apolloServer.applyMiddleware({ app });
 
   // Serve static files from the React app build directory
-  app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
+  app.use(express.static(path.join(__dirname, '..', 'recipe', 'build')));
 
   // Catch-all handler for any request that doesn't match the above
   app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'));
+    res.sendFile(path.join(__dirname, '..', 'recipe', 'build', 'index.html'));
   });
 
   app.listen(PORT, () => {
