@@ -2,7 +2,7 @@
 
 ## Description
 
-Why pluck your hair trying to remember a recipe your great-grandmother's father's aunt's third cousin made once when you visited when you can join a community that shares and tries out each other's recipes. It is like come dine with me but not really in person. Spoons is a WebApplication that brings people from all over the world to be a part of a network that just loves food and does not gatekeep family recipes or new recipes they have found in their journey of discovering flavors/flavours(depending on which part of the world you are from). Test.
+Why pluck your hair trying to remember a recipe your great-grandmother's father's aunt's third cousin made once when you visited when you can join a community that shares and tries out each other's recipes. It is like come dine with me but not really in person. Spoons is a WebApplication that brings people from all over the world to be a part of a network that just loves food and does not gatekeep family recipes or new recipes they have found in their journey of discovering flavors/flavours(depending on which part of the world you are from). Test. test.
 
 ## Table of Contents:
 
